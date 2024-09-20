@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		985C24382C9D9770000409EA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 985C24372C9D9770000409EA /* Alamofire */; };
+		985C243D2C9D983F000409EA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 985C243C2C9D983F000409EA /* Swinject */; };
+		985C24422C9D991F000409EA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 985C24412C9D991F000409EA /* Kingfisher */; };
+		985C24482C9DE231000409EA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 985C24472C9DE231000409EA /* Realm */; };
+		985C244D2C9DE310000409EA /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 985C244C2C9DE310000409EA /* Toast */; };
+		985C24512C9DE51D000409EA /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 985C24502C9DE51D000409EA /* BottomSheet */; };
 		98EA87B12C9D906200DFD5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA87B02C9D906200DFD5EA /* AppDelegate.swift */; };
 		98EA87B32C9D906200DFD5EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA87B22C9D906200DFD5EA /* SceneDelegate.swift */; };
 		98EA87B52C9D906200DFD5EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA87B42C9D906200DFD5EA /* ViewController.swift */; };
@@ -31,6 +37,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985C24422C9D991F000409EA /* Kingfisher in Frameworks */,
+				985C24512C9DE51D000409EA /* BottomSheet in Frameworks */,
+				985C24382C9D9770000409EA /* Alamofire in Frameworks */,
+				985C24482C9DE231000409EA /* Realm in Frameworks */,
+				985C244D2C9DE310000409EA /* Toast in Frameworks */,
+				985C243D2C9D983F000409EA /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +89,21 @@
 				98EA87A92C9D906200DFD5EA /* Sources */,
 				98EA87AA2C9D906200DFD5EA /* Frameworks */,
 				98EA87AB2C9D906200DFD5EA /* Resources */,
+				985C244E2C9DE371000409EA /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PodcastApp;
+			packageProductDependencies = (
+				985C24372C9D9770000409EA /* Alamofire */,
+				985C243C2C9D983F000409EA /* Swinject */,
+				985C24412C9D991F000409EA /* Kingfisher */,
+				985C24472C9DE231000409EA /* Realm */,
+				985C244C2C9DE310000409EA /* Toast */,
+				985C24502C9DE51D000409EA /* BottomSheet */,
+			);
 			productName = PodcastApp;
 			productReference = 98EA87AD2C9D906200DFD5EA /* PodcastApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +132,15 @@
 				Base,
 			);
 			mainGroup = 98EA87A42C9D906200DFD5EA;
+			packageReferences = (
+				985C24362C9D9770000409EA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				985C243B2C9D983F000409EA /* XCRemoteSwiftPackageReference "Swinject" */,
+				985C24402C9D991F000409EA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				985C24432C9D9E38000409EA /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				985C24462C9DE231000409EA /* XCRemoteSwiftPackageReference "realm-swift" */,
+				985C244B2C9DE310000409EA /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				985C244F2C9DE51D000409EA /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = 98EA87AE2C9D906200DFD5EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +162,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		985C244E2C9DE371000409EA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98EA87A92C9D906200DFD5EA /* Sources */ = {
@@ -300,6 +351,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +380,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +416,98 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		985C24362C9D9770000409EA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com//Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		985C243B2C9D983F000409EA /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+		985C24402C9D991F000409EA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
+		985C24432C9D9E38000409EA /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.57.0;
+			};
+		};
+		985C24462C9DE231000409EA /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		985C244B2C9DE310000409EA /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		985C244F2C9DE51D000409EA /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joomcode/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		985C24372C9D9770000409EA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 985C24362C9D9770000409EA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		985C243C2C9D983F000409EA /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 985C243B2C9D983F000409EA /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		985C24412C9D991F000409EA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 985C24402C9D991F000409EA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		985C24472C9DE231000409EA /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 985C24462C9DE231000409EA /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		985C244C2C9DE310000409EA /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 985C244B2C9DE310000409EA /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+		985C24502C9DE51D000409EA /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 985C244F2C9DE51D000409EA /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98EA87A52C9D906200DFD5EA /* Project object */;
 }
