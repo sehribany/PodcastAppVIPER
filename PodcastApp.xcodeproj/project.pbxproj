@@ -13,6 +13,15 @@
 		985C24482C9DE231000409EA /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 985C24472C9DE231000409EA /* Realm */; };
 		985C244D2C9DE310000409EA /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 985C244C2C9DE310000409EA /* Toast */; };
 		985C24512C9DE51D000409EA /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 985C24502C9DE51D000409EA /* BottomSheet */; };
+		985C24702C9DECF0000409EA /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C246A2C9DECF0000409EA /* HomeContract.swift */; };
+		985C24712C9DECF0000409EA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C246B2C9DECF0000409EA /* HomePresenter.swift */; };
+		985C24722C9DECF0000409EA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C246C2C9DECF0000409EA /* HomeRouter.swift */; };
+		985C24732C9DECF0000409EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C246D2C9DECF0000409EA /* HomeViewController.swift */; };
+		985C24742C9DECF0000409EA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C246E2C9DECF0000409EA /* HomeInteractor.swift */; };
+		985C24752C9DECF0000409EA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C246F2C9DECF0000409EA /* HomeView.swift */; };
+		985C24782C9DEE29000409EA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C24772C9DEE29000409EA /* BaseView.swift */; };
+		985C247A2C9DEE8A000409EA /* NavigationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985C24792C9DEE8A000409EA /* NavigationViewProtocol.swift */; };
+		985C247D2C9DEF15000409EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 985C247C2C9DEF15000409EA /* SnapKit */; };
 		98EA87B12C9D906200DFD5EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA87B02C9D906200DFD5EA /* AppDelegate.swift */; };
 		98EA87B32C9D906200DFD5EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EA87B22C9D906200DFD5EA /* SceneDelegate.swift */; };
 		98EA87BA2C9D906300DFD5EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EA87B92C9D906300DFD5EA /* Assets.xcassets */; };
@@ -20,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		985C246A2C9DECF0000409EA /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		985C246B2C9DECF0000409EA /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		985C246C2C9DECF0000409EA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		985C246D2C9DECF0000409EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		985C246E2C9DECF0000409EA /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		985C246F2C9DECF0000409EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		985C24772C9DEE29000409EA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		985C24792C9DEE8A000409EA /* NavigationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewProtocol.swift; sourceTree = "<group>"; };
 		98EA87AD2C9D906200DFD5EA /* PodcastApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodcastApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EA87B02C9D906200DFD5EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98EA87B22C9D906200DFD5EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,7 @@
 				985C24422C9D991F000409EA /* Kingfisher in Frameworks */,
 				985C24512C9DE51D000409EA /* BottomSheet in Frameworks */,
 				985C24382C9D9770000409EA /* Alamofire in Frameworks */,
+				985C247D2C9DEF15000409EA /* SnapKit in Frameworks */,
 				985C24482C9DE231000409EA /* Realm in Frameworks */,
 				985C244D2C9DE310000409EA /* Toast in Frameworks */,
 				985C243D2C9D983F000409EA /* Swinject in Frameworks */,
@@ -48,6 +66,7 @@
 		985C24522C9DE75B000409EA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				985C24762C9DEE17000409EA /* Base */,
 				985C24562C9DE7B1000409EA /* Constants */,
 				985C24552C9DE789000409EA /* Protocols */,
 				985C24542C9DE778000409EA /* Extensions */,
@@ -73,6 +92,7 @@
 		985C24552C9DE789000409EA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				985C24792C9DEE8A000409EA /* NavigationViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -88,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				985C24582C9DE829000409EA /* UIComponents */,
-				985C24592C9DE83D000409EA /* Helpers */,
 				985C245A2C9DE853000409EA /* Services */,
+				985C24592C9DE83D000409EA /* Helpers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -118,6 +138,7 @@
 		985C245B2C9DE8C9000409EA /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				985C24692C9DECC5000409EA /* Home */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -125,8 +146,8 @@
 		985C245C2C9DE8DD000409EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				985C245F2C9DE916000409EA /* Localization */,
 				985C245E2C9DE903000409EA /* Assets */,
+				985C245F2C9DE916000409EA /* Localization */,
 				985C245D2C9DE8F3000409EA /* Fonts */,
 			);
 			path = Resources;
@@ -227,6 +248,27 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		985C24692C9DECC5000409EA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				985C246A2C9DECF0000409EA /* HomeContract.swift */,
+				985C246B2C9DECF0000409EA /* HomePresenter.swift */,
+				985C246C2C9DECF0000409EA /* HomeRouter.swift */,
+				985C246D2C9DECF0000409EA /* HomeViewController.swift */,
+				985C246E2C9DECF0000409EA /* HomeInteractor.swift */,
+				985C246F2C9DECF0000409EA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		985C24762C9DEE17000409EA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				985C24772C9DEE29000409EA /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		98EA87A42C9D906200DFD5EA = {
 			isa = PBXGroup;
 			children = (
@@ -247,12 +289,12 @@
 			isa = PBXGroup;
 			children = (
 				985C24682C9DEA38000409EA /* Application */,
+				985C24522C9DE75B000409EA /* Core */,
 				985C24642C9DE9B8000409EA /* Stroage */,
 				985C24602C9DE95D000409EA /* Network */,
-				985C24522C9DE75B000409EA /* Core */,
+				985C245C2C9DE8DD000409EA /* Resources */,
 				985C24572C9DE815000409EA /* Common */,
 				985C245B2C9DE8C9000409EA /* Features */,
-				985C245C2C9DE8DD000409EA /* Resources */,
 			);
 			path = PodcastApp;
 			sourceTree = "<group>";
@@ -281,6 +323,7 @@
 				985C24472C9DE231000409EA /* Realm */,
 				985C244C2C9DE310000409EA /* Toast */,
 				985C24502C9DE51D000409EA /* BottomSheet */,
+				985C247C2C9DEF15000409EA /* SnapKit */,
 			);
 			productName = PodcastApp;
 			productReference = 98EA87AD2C9D906200DFD5EA /* PodcastApp.app */;
@@ -318,6 +361,7 @@
 				985C24462C9DE231000409EA /* XCRemoteSwiftPackageReference "realm-swift" */,
 				985C244B2C9DE310000409EA /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				985C244F2C9DE51D000409EA /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				985C247B2C9DEF15000409EA /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 98EA87AE2C9D906200DFD5EA /* Products */;
 			projectDirPath = "";
@@ -368,6 +412,14 @@
 			files = (
 				98EA87B12C9D906200DFD5EA /* AppDelegate.swift in Sources */,
 				98EA87B32C9D906200DFD5EA /* SceneDelegate.swift in Sources */,
+				985C247A2C9DEE8A000409EA /* NavigationViewProtocol.swift in Sources */,
+				985C24702C9DECF0000409EA /* HomeContract.swift in Sources */,
+				985C24712C9DECF0000409EA /* HomePresenter.swift in Sources */,
+				985C24722C9DECF0000409EA /* HomeRouter.swift in Sources */,
+				985C24732C9DECF0000409EA /* HomeViewController.swift in Sources */,
+				985C24782C9DEE29000409EA /* BaseView.swift in Sources */,
+				985C24742C9DECF0000409EA /* HomeInteractor.swift in Sources */,
+				985C24752C9DECF0000409EA /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +694,14 @@
 				minimumVersion = 2.0.5;
 			};
 		};
+		985C247B2C9DEF15000409EA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -674,6 +734,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 985C244F2C9DE51D000409EA /* XCRemoteSwiftPackageReference "BottomSheet" */;
 			productName = BottomSheet;
+		};
+		985C247C2C9DEF15000409EA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 985C247B2C9DEF15000409EA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
